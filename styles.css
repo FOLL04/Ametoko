@@ -446,3 +446,104 @@ font-size: 20px;
     margin-top: 2%;
     margin-bottom: 5%;
 }
+@media screen and (max-width: 768px) {
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .form-control {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+    .test {
+        grid-template-columns: 1fr; /* Passe en une seule colonne sur mobile */
+        gap: 20px; /* Réduit l’espace entre les blocs */
+    }
+
+    .part2 img {
+        width: 100%; /* Image pleine largeur sur mobile */
+        height: auto;
+        margin-left: 0; /* Centre l’image */
+    }
+
+    .part1, .part3 {
+        font-size: 18px; /* Texte légèrement plus petit */
+        padding: 15px;
+    }
+}
+@media (max-width: 600px) {
+    .about {
+        grid-template-columns: 1fr; /* Passe en une seule colonne sur mobile */
+        gap: 20px; /* Réduit l’espace entre les blocs */
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .about1 {
+        padding: 20px;
+    }
+
+    .card-image img {
+        width: 100%; /* Image pleine largeur sur mobile */
+        height: auto;
+        margin: 0 auto; /* Centre l’image */
+    }
+
+    .card-content {
+        max-width: 100%;
+    }
+
+    .card-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 600px) {
+    .socio {
+        grid-template-columns: 1fr; /* Passe en une seule colonne sur mobile */
+        gap: 20px; /* Réduit l’espace entre les blocs */
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Passe en une seule colonne sur mobile */
+        gap: 20px; /* Réduit l’espace entre les blocs */
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .gallery img {
+        width: 100%; /* Image pleine largeur sur mobile */
+        height: auto;
+        margin: 0 auto; /* Centre l’image */
+    }
+}
+@media (max-width: 600px) {
+    .carrousel-treck {
+        grid-template-columns: 1fr; /* Passe en une seule colonne sur mobile */
+        gap: 20px; /* Réduit l’espace entre les blocs */
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .carrousel-treck img {
+        width: 100%; /* Image pleine largeur sur mobile */
+        height: auto;
+        margin: 0 auto; /* Centre l’image */
+    }
+}
+/* Fin du fichier CSS */
