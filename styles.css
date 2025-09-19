@@ -1,549 +1,573 @@
-*{
-    font-family: 'Times New Roman', Times, serif;
-    padding: 0;
-    margin: 0;
-}
-.nav-link {
-  color: #c62828;
-  font-weight: bold;
-  border-bottom: 2px solid #c62828;
-}
+/* sur toutes les pages (titre) */
 
-body{
-    background-color: #f0f0f0;
-}
-.test{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-}
-.Vision1{
-    text-align: center;
-    background-color: tomato;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    margin-top: 1%;
-}
-.Vision {
-  padding: 40px 20px;
-  background-color: #fdf6f9;
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
-}
-
-/* Titre centré */
 .Vision1 {
+  background: linear-gradient(90deg, red, violet, blue);
+  padding: 2rem;
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #cc3366;
+  margin-bottom: 4%;
+  border-radius: 2%;
+}
+
+.Vision1 h1 {
+  color: white; /* ou "dodgerblue" si tu veux tester une autre teinte */
+  font-size: 2rem; /* taille typique d’un H2 */
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 
 
-/* Disposition horizontale des 3 blocs */
-.test {
+/* page acceuil */
+
+.Vision {
+  
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.test0 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* justify-content: space-between;
-  align-items: center; */
-  flex-wrap: wrap;
-  gap: 30px;
+  align-items: center;
+  gap: 2rem;
 }
+
+.part1, .part3{
+  padding-top: 10%;
+  font-size: 110%;
+}
+
 /* Style des blocs */
-.part1, .part3 {
-  font-size: 20px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
+.part1, .part2, .part3 {
+  width: 100%;
+  max-width: 600px;
+  text-align: justify;
 }
 
-/* Image au centre avec forme inhabituelle */
+/* Image centrée */
 .part2 img {
-  width: 300px;
-  height: 300px;
-  margin-left: 15%;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.albums {
+  padding: 3rem 1rem;
+  background-color: #f5f5f5;
 }
 
-/* Hover spécial sur l’image */
-.part2 img:hover {
-  transform: scale(1.1) rotate(10deg);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+.albums h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem; /* ✅ espace sous le titre */
+  color: #333;
+  text-transform: uppercase;
 }
-.mb-1{
-    margin-bottom: 3%;
-    margin-top: 0%;
-    font-size: 2.0rem;
-    color: white;
-    font-weight: bold;
+
+/* Grille responsive */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
 }
-.album-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
-}
+
+/* Style des images */
 .album-item img {
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  height: 400px;
+  object-fit: cover; /* ✅ coupe proprement sans déformer */
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Effet au survol */
 .album-item img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
-
-.formation-section {
+/* Section globale */
+.formation-section1 {
   display: flex;
   flex-wrap: wrap;
-  padding: 40px;
-  gap: 40px;
-  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  background-color: #fff;
   align-items: flex-start;
 }
 
+/* ✅ Bloc gauche : image + titre + bouton */
 .left-panel {
-  flex: 1;
-  min-width: 300px;
+  flex: 1 1 300px;
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 .left-panel h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #d63384;
 }
 
 .formation-image {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .btn-en-savoir-plus {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #0077cc;
+  padding: 0.6rem 1.2rem;
+  background-color: #d63384;
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .btn-en-savoir-plus:hover {
-  background-color: #005fa3;
+  background-color: #b02a6f;
 }
 
+/* ✅ Bloc droit : cartes en grille */
 .right-panel {
-  flex: 2;
+  flex: 2 1 600px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
-.formation-card {
-  background-color: #f2f2f2;
-  padding: 20px;
+/* Cartes individuelles */
+.formation-card1 {
+  background-color: #f8f8f8;
+  padding: 1.5rem;
   border-radius: 10px;
-  text-align: left;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.formation-card1:hover {
+  transform: translateY(-5px);
 }
 
 .icon {
-  font-size: 30px;
-  color: #0077cc;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #d63384;
+  margin-bottom: 0.5rem;
 }
 
-.formation-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.formation-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.formation-card li {
-  margin-bottom: 8px;
-  font-size: 15px;
-}
-
-/* <!-- a propos --!> */
-.about{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-.choix{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    gap: 2rem;
-    margin-top: 2%;
-}
-
-
-/* BLOC PRINCIPAL : image + texte dans une seule carte */
-.formation-card {
-  display: grid; /* Disposition en ligne : image à gauche, texte à droite */
-  grid-template-columns: 1fr 1fr;
-  align-items: center; /* Alignement vertical centré */
-  /* justify-content: space-between; Espace entre les deux parties */
-  background-color: #fff; /* Fond blanc pour la carte */
-  border: 2px solid #e0c4a8; /* Bordure beige dorée */
-  border-radius: 12px; /* Coins arrondis */
-  padding: 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Ombre douce */
-  flex-wrap: wrap; /* Permet le passage en colonne sur mobile */
-  gap: 30px; /* Espace entre image et texte */
-}
-
-/* IMAGE À GAUCHE */
-.card-image img {
-  width: 300px; /* Taille fixe ou adaptative */
-  border-radius: 10px;
-  object-fit: cover; /* Coupe propre si l’image dépasse */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* CONTENU TEXTE À DROITE */
-.card-content {
-  max-width: 500px;
-  text-align: center;
-}
-
-/* TITRE */
-.card-content h2 {
-  font-size: 1.8rem;
-  color: #a0522d; /* Brun chaud */
-  margin-bottom: 10px;
-}
-
-/* TRAIT SÉPARATEUR CENTRÉ */
-.separator {
-  width: 60px;
-  height: 3px;
-  background-color: #a0522d;
-  border: none;
-  margin: 0 auto 20px auto;
-}
-
-/* TEXTE PARAGRAPHE */
-.card-content p {
-  font-size: 1rem;
-  line-height: 1.6;
+.formation-card1 h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
   color: #333;
 }
 
-.testimonials{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
+.formation-card1 ul {
+  padding-left: 1rem;
+  list-style: disc;
+  color: #555;
 }
-.testimonial-card {
-  background-color: #fdfdfd;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 20px;
+
+/* 📱 Responsive mobile */
+@media screen and (max-width: 768px) {
+  .formation-section1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-panel, .right-panel {
+    max-width: 100%;
+  }
+
+  .right-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* page a propos */
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  background-color: #fff;
+  align-items: center;
+}
+
+/*  Bloc texte */
+.about1 {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.about1 h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d63384;
+  text-transform: uppercase;
+}
+
+.about1 p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+
+/* Bloc image */
+.about2 {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#kayi {
+  width: 100%;
   max-width: 400px;
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.choix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+/* Carte */
+.formation-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  min-height: 250px;
+  width: 55%;
+}
+
+.formation-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+.card-image {
+  flex: 1;
+  max-width: 30%;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contenu */
+.card-content {
+  flex: 2;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-content h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #d63384;
+}
+
+.separator {
+  width: 40px;
+  height: 3px;
+  background-color: #d63384;
+  border: none;
+  margin-bottom: 0.8rem;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+}
+
+/* Vidéo responsive */
+.video-container video {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+/* Section globale */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background-color: #fdfdfd;
+}
+
+/* Carte individuelle */
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
-  font-family: 'Segoe UI', sans-serif;
   transition: transform 0.3s ease;
 }
 
 .testimonial-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-5px);
 }
 
+/* Texte du témoignage */
 .testimonial-card p {
   font-size: 1rem;
+  line-height: 1.6;
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   font-style: italic;
 }
 
+/* Image du client */
 .testimonial-card img {
-  border-radius: 20%;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  border: 3px solid #d63384;
 }
 
+/* Nom du client */
 .testimonial-card h4 {
-  font-size: 1.1rem;
-  color: #555;
-  margin-top: 0;
-  font-weight: 600;
-}
-.about{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    gap: 6%;
-    margin-top: 2%;
-    margin-left: 5%;
-}
-/* BLOC PRINCIPAL DE PRÉSENTATION */
-.about1 {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 30px;
-  padding-bottom: 20%;
-  background-color: #fff8f4; /* Fond doux, chaleureux */
-  border-left: 6px solid #a0522d; /* Accent vertical brun élégant */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  line-height: 1.7;
-  color: #333;
+  font-size: 1rem;
+  color: #d63384;
+  margin: 0;
 }
 
-/* TEXTE DU PARAGRAPHE */
-.about1 p {
-font-size: 20px; 
-  text-align: justify;
-}
-
-/* NOM DE LA FONDATRICE EN GRAS */
-.about1 b {
-  color: #a52a2a; /* Rouge foncé pour mettre en valeur le nom */
-  font-weight: bold;
-}
-
-/* EFFET AU SURVOL DU BLOC (facultatif) */
-.about1:hover {
-  background-color: #fff3ec;
-  transition: background-color 0.3s ease;
-}
-#kayi{
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 500px;
-    height: 600px;
-    margin-top: 12%;
-
-}
-
-
-/* PAGE CONTACT */
-.socio{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    gap: 2rem;
-    margin-top: 2%;
-}
-/* CONTENEUR PRINCIPAL DU FORMULAIRE */
-.contact-form {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 30px;
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  justify-items: center;
   background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  font-family: 'Segoe UI', sans-serif;
 }
 
-/* TITRE DU FORMULAIRE */
+/* Chaque image */
+.carrousel-treck img {
+  width: 100%;
+  max-width: 300px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.carrousel-treck img:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+/* 📱 Responsive : 2 colonnes sur téléphone */
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .carrousel-treck img {
+    height: 400px;
+  }
+}
+
+/* 📱 Très petit écran : 1 colonne */
+@media screen and (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .carrousel-treck img {
+    height: 350px;
+  }
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 600px) {
+  .testimonial-card {
+    padding: 1rem;
+  }
+
+  .testimonial-card p {
+    font-size: 0.95rem;
+  }
+
+  .testimonial-card img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .testimonial-card h4 {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* 📱 Mobile ajusté */
+@media screen and (max-width: 600px) {
+  .formation-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .card-image {
+    max-width: 100%;
+  }
+
+  .card-image img {
+    height: auto;
+  }
+
+  .card-content {
+    padding: 0.8rem;
+  }
+
+  .card-content h2 {
+    font-size: 1rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* 📱 Responsive mobile */
+@media screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about1, .about2 {
+    max-width: 100%;
+  }
+
+  .about1 p {
+    text-align: left;
+  }
+}
+
+/* page contact*/
+.maps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+}
+
+/* Carte responsive */
+.maps iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+.contact-form {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 .contact-form h2 {
   text-align: center;
+  margin-bottom: 2rem;
+  color: #d63384;
   font-size: 1.8rem;
-  color: #a52a2a; /* Rouge foncé élégant */
-  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
-/* GROUPE DE CHAMPS */
-.mb-3 {
-  margin-bottom: 20px;
-}
-
-/* LABELS DES CHAMPS */
-.form-label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 8px;
+/* Champs du formulaire */
+.contact-form .form-label {
+  font-weight: bold;
   color: #333;
 }
 
-/* CHAMPS DE SAISIE */
-.form-control {
+.contact-form .form-control {
   width: 100%;
-  padding: 10px 12px;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 5px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
 }
 
-/* EFFET AU FOCUS */
-.form-control:focus {
-  border-color: #a52a2a; /* Accent rouge au focus */
-  outline: none;
-}
-
-/* BOUTON DE SOUMISSION */
-.btn.btn-primary {
-  background-color: #c62828; /* Rouge vif */
-  color: #fff;
+/* Bouton */
+.contact-form .btn-primary {
+  background-color: #d63384;
+  color: white;
   border: none;
-  padding: 12px 20px;
+  padding: 0.7rem 1.5rem;
   font-size: 1rem;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: block;
   margin: 0 auto;
 }
 
-/* EFFET AU SURVOL DU BOUTON */
-.btn.btn-primary:hover {
-  background-color: #b71c1c; /* Rouge plus foncé au survol */
+.contact-form .btn-primary:hover {
+  background-color: #b02a6f;
 }
 
-.gallery{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1%;
-    /* padding: 2rem; */
-    padding-bottom: 15%;
-    align-items: center;
-    padding-left: 10%;
-}
-
-.carrousel-treck{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    gap: 2rem;
-    /* padding: 2rem; */
-}
-.carrousel-treck img {
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-   
-}
-
-/* Effet au survol */
-.carrousel-treck img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-.maps{
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 5%;
-}
-@media screen and (max-width: 768px) {
+/* Responsive mobile */
+@media screen and (max-width: 600px) {
   .contact-form {
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
-  .form-control {
-    font-size: 1rem;
+  .contact-form h2 {
+    font-size: 1.5rem;
   }
 
-  .btn {
+  .contact-form .btn-primary {
     width: 100%;
   }
 }
-@media (max-width: 768px) {
-    .test {
-        grid-template-columns: 1fr; /* Passe en une seule colonne sur mobile */
-        gap: 20px; /* Réduit l’espace entre les blocs */
-    }
 
-    .part2 img {
-        width: 100%; /* Image pleine largeur sur mobile */
-        height: auto;
-        margin-left: 0; /* Centre l’image */
-    }
-
-    .part1, .part3 {
-        font-size: 18px; /* Texte légèrement plus petit */
-        padding: 15px;
-    }
-}
-@media (max-width: 600px) {
-    .about {
-        grid-template-columns: 1fr; /* Passe en une seule colonne sur mobile */
-        gap: 20px; /* Réduit l’espace entre les blocs */
-        margin-left: 0;
-        padding: 1rem;
-    }
-
-    .about1 {
-        padding: 20px;
-    }
-
-    .card-image img {
-        width: 100%; /* Image pleine largeur sur mobile */
-        height: auto;
-        margin: 0 auto; /* Centre l’image */
-    }
-
-    .card-content {
-        max-width: 100%;
-    }
-
-    .card-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .card-content p {
-        font-size: 0.9rem;
-    }
-}
-@media (max-width: 600px) {
-    .socio {
-        grid-template-columns: 1fr; /* Passe en une seule colonne sur mobile */
-        gap: 20px; /* Réduit l’espace entre les blocs */
-        margin-left: 0;
-        padding: 1rem;
-    }
-
-    .contact-form {
-        padding: 20px;
-    }
-}
-@media (max-width: 600px) {
-    .gallery {
-        grid-template-columns: 1fr; /* Passe en une seule colonne sur mobile */
-        gap: 20px; /* Réduit l’espace entre les blocs */
-        margin-left: 0;
-        padding: 1rem;
-    }
-
-    .gallery img {
-        width: 100%; /* Image pleine largeur sur mobile */
-        height: auto;
-        margin: 0 auto; /* Centre l’image */
-    }
-}
-@media (max-width: 600px) {
-    .carrousel-treck {
-        grid-template-columns: 1fr; /* Passe en une seule colonne sur mobile */
-        gap: 20px; /* Réduit l’espace entre les blocs */
-        margin-left: 0;
-        padding: 1rem;
-    }
-
-    .carrousel-treck img {
-        width: 100%; /* Image pleine largeur sur mobile */
-        height: auto;
-        margin: 0 auto; /* Centre l’image */
-    }
-}
-/* Fin du fichier CSS */
